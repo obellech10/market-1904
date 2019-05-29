@@ -32,4 +32,15 @@ class Market
     unsorted_list
   end
 
+  def total_inventory
+    ti = {}
+    @vendors.each do |vendor|
+      vendor.inventory.each do |item, qty|
+          ti[item] = qty
+      end
+          # binding.pry
+    end
+    ti
+  end
+
 end
