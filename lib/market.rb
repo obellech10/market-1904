@@ -25,4 +25,11 @@ class Market
     end
   end
 
+  def sorted_item_list
+    unsorted_list = @vendors.map do |vendor|
+      vendor.inventory.keys
+    end.flatten.sort.uniq
+    unsorted_list
+  end
+
 end
